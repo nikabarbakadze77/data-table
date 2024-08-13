@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DataTable</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #dialog-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="addUser">დამატება</button>
+    <button id="deleteUser">წაშლა</button>
+
+    <table id="userTable" class="display">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <div id="dialog-form">
+        <form>
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                <br><br>
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname">
+                <br><br>
+                <label for="mail">Email</label>
+                <input type="text" name="mail" id="mail">
+                <br><br>
+            </fieldset>
+        </form>
+    </div>
+</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="index.js"></script>
+</html>
