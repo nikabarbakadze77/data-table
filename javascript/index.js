@@ -13,6 +13,7 @@ $(document).ready(function() {
         ]
     });
 
+
     $("#addUser").click(function() {
         selectedRow = null;
         $("#name").val('');
@@ -66,3 +67,31 @@ $(document).ready(function() {
     });
 });
 
+const menuEl = document.querySelector('#menu');
+
+
+    function getNames(item, parent) {
+      const listItem = document.createElement('li');
+      listItem.textContent = item.name;
+      parent.appendChild(listItem);
+
+      if (item.children && item.children.length > 0) {
+        const childList = document.createElement('ul');
+        childList.classList.add('nested'); 
+        parent.appendChild(childList);
+
+        item.children.forEach(child => getNames(child, childList));
+
+        
+        listItem.addEventListener('click', (e) => {
+          e.stopPropagation(); 
+          childList.classList.toggle('active');
+        });
+      }
+    }
+
+    fetch('/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        data.forEach(item => getNames(item, menuEl));
+      });

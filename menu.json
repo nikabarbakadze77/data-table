@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Home",
+        "url": "/",
+        "icon": "home"
+    },
+    {
+        "name": "Reports",
+        "url": "/reports",
+        "icon": "bar_chart",
+        "children": [
+            {
+                "name": "Daily",
+                "url": "/reports/daily"
+            },
+            {
+                "name": "Monthly",
+                "url": "/reports/monthly"
+            }
+        ]
+    },
+    {
+        "name": "Settings",
+        "url": "/settings",
+        "icon": "settings",
+        "children": [
+            {
+                "name": "Profile",
+                "url": "/settings/profile"
+            }
+        ]
+    }
+]

@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+section.table {
+    padding: 50px;
+    width: 80%;
+}
+
+#dialog-form {
+    display: none;
+}
+
+table#userTable {
+    border: solid 2px rgb(71, 71, 71);
+    border-radius: 5px;
+}
+
+button {
+    margin-bottom: 15px;
+}
+
+button#addUser {
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button#addUser:hover {
+    background-color: rgb(54, 154, 54);
+}
+
+button#deleteUser {
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button#deleteUser:hover {
+    background-color: rgb(238, 55, 55);
+}
+
+.menu {
+    border: solid 1px rgb(108, 106, 106);
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    z-index: 99;
+    transition: all 0.5s ease-in-out;
+    max-width: 100px;
+    
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      gap: 40px;
+      height: 100%;
+      left: 0px;
+      
+      li {
+        padding: 20px;
+        cursor: pointer;
+      }
+
+    .nested {
+        display: none;
+    }
+    .active {
+        display: block;
+        height: 10%;
+    }
+   
+
+    }
+    ul:hover {
+        li {
+            display: block;
+            
+        }
+    }
+}
+
+
+#dialog-form {
+
+    fieldset{
+        border: solid 1px black;
+        border-radius: 10px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        
+
+        input {
+    
+
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+    }
+}
+
