@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    padding: 20px;
     display: flex;
     justify-content: center;
 }
@@ -52,20 +52,22 @@ button#deleteUser:hover {
 .menu {
     border: solid 1px rgb(108, 106, 106);
     border-radius: 10px;
-    padding: 10px;
+    padding: 0px;
     position: fixed;
     left: 0px;
     top: 0px;
     height: 100vh;
     z-index: 99;
-    transition: all 0.5s ease-in-out;
     max-width: 100px;
+    transition: all 0.8s ease-in-out;
+    
     
 
     ul {
       list-style: none;
       display: flex;
       flex-direction: column;
+      align-items: center;
       padding: 15px;
       gap: 40px;
       height: 100%;
@@ -74,7 +76,13 @@ button#deleteUser:hover {
       li {
         padding: 20px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
       }
+
+     
 
     .nested {
         display: none;
@@ -86,14 +94,16 @@ button#deleteUser:hover {
    
 
     }
+  
     ul:hover {
-        li {
-            display: block;
-            
-        }
+       li {
+        display: flex;
+       } 
     }
 }
-
+.menu:hover {
+    padding: 20px;
+}
 
 #dialog-form {
 
@@ -103,6 +113,7 @@ button#deleteUser:hover {
         width: 300px;
         display: flex;
         flex-direction: column;
+        background-color: white;
         
 
         input {

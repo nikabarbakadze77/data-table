@@ -2,7 +2,7 @@ $(document).ready(function() {
     let selectedRow;
     let dataTable = $('#userTable').DataTable({
         ajax: {
-            url: 'data.json',
+            url: 'data/data.json',
             dataSrc: ''
         },
         columns: [
@@ -72,6 +72,27 @@ const menuEl = document.querySelector('#menu');
 
     function getNames(item, parent) {
       const listItem = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = item.url || '#';
+      const iconPath = `icons/${item.name.toLowerCase()}.png`
+      const icon = document.createElement('img');
+      icon.src = `icons/${item.name.toLowerCase()}.png`;
+      fetch(iconPath)
+        .then(Response =>{
+            if(Response.ok) {
+                icon.src = iconPath;
+            } else {
+                
+            }
+
+            icon.alt = `${item.name}icon`;
+            icon.style.width ='20px';
+            icon.style.marginRight = '10px'
+             
+            listItem.appendChild(icon);
+        });
+            
+
       listItem.textContent = item.name;
       parent.appendChild(listItem);
 
@@ -90,7 +111,7 @@ const menuEl = document.querySelector('#menu');
       }
     }
 
-    fetch('/menu.json')
+    fetch('data/menu.json')
       .then(res => res.json())
       .then(data => {
         data.forEach(item => getNames(item, menuEl));
