@@ -17,6 +17,7 @@ section.table {
 table#userTable {
     border: solid 2px rgb(71, 71, 71);
     border-radius: 5px;
+  
 }
 
 button {
@@ -51,7 +52,7 @@ button#deleteUser:hover {
 
 .menu {
     border: solid 1px rgb(108, 106, 106);
-    border-radius: 10px;
+    border-radius: 0px 10px 0px 10px;
     padding: 0px;
     position: fixed;
     left: 0px;
@@ -80,8 +81,12 @@ button#deleteUser:hover {
         align-items: center;
         justify-content: flex-start;
         flex-direction: row-reverse;
+
       }
 
+      a {
+        display: none;
+      }
      
 
     .nested {
@@ -103,6 +108,10 @@ button#deleteUser:hover {
 }
 .menu:hover {
     padding: 20px;
+
+    a {
+        display: block;
+    }
 }
 
 #dialog-form {
@@ -127,5 +136,6 @@ button#deleteUser:hover {
             margin-bottom: 5px;
         }
     }
+    
 }
 

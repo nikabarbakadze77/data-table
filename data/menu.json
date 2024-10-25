@@ -1,12 +1,12 @@
 [
     {
         "name": "Home",
-        "url": "/",
+        "url": "/index.html",
         "icon": "home"
     },
     {
         "name": "Reports",
-        "url": "/reports",
+        "url": "reports-page/reports.html",
         "icon": "bar_chart",
         "children": [
             {

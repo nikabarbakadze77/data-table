@@ -3,7 +3,7 @@
 <head>
     <title>DataTable</title>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="./reports.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="menu">
@@ -26,8 +26,10 @@
             
             </tbody>
         </table>
-
         <div id="dialog-form">
+            <div class="dialog-header">
+                <button>Close</button>
+            </div>
             <form>
                 <fieldset>
                     <label for="name">Name</label>
@@ -41,11 +43,15 @@
                     <br><br>
                 </fieldset>
             </form>
+            <div class="dialog-footer">
+                <button id="saveUser">შენახვა</button>
+                <button id="deleteUser" >წაშლა</button>
+            </div>
         </div>
     </section>
 </body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="../script/index.js"></script>
+    <script src="../script/index.js" type="module"></script>
 </html>
