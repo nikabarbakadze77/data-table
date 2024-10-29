@@ -10,8 +10,13 @@
         <ul id="menu"></ul>
     </div>
     <section class="table">
-        <button id="addUser">დამატება</button>
-        <button id="deleteUser">წაშლა</button>
+        <button id="addUser">
+            <span class="icon">+</span> დამატება
+        </button>
+        
+        <button id="deleteUser">
+            <span class="icon">🗑️</span> წაშლა
+        </button>
 
         <table id="userTable" class="display">
             <thead>
@@ -27,9 +32,6 @@
             </tbody>
         </table>
         <div id="dialog-form">
-            <div class="dialog-header">
-                <button>Close</button>
-            </div>
             <form>
                 <fieldset>
                     <label for="name">Name</label>
@@ -45,7 +47,7 @@
             </form>
             <div class="dialog-footer">
                 <button id="saveUser">შენახვა</button>
-                <button id="deleteUser" >წაშლა</button>
+                <button id="deleteUser" >დახურვა</button>
             </div>
         </div>
     </section>

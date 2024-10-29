@@ -24,6 +24,7 @@ button {
     margin-bottom: 15px;
 }
 
+
 button#addUser {
     border: none;
     background-color: green;
@@ -32,9 +33,8 @@ button#addUser {
     padding: 5px 10px;
     cursor: pointer;
 }
-
 button#addUser:hover {
-    background-color: rgb(54, 154, 54);
+    background-color: rgb(48, 133, 48);
 }
 
 button#deleteUser {
@@ -138,4 +138,5 @@ button#deleteUser:hover {
     }
     
 }
+
 
